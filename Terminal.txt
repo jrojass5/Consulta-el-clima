@@ -1,0 +1,39 @@
+React:
+npx create-react-app consulta-el-clima
+
+Compilar para producción
+npm run build
+
+
+Firebase:
+npm install firebase
+npm install -g firebase-tools
+firebase login --reauth
+firebase init
+
+Para actualizar Hosting:
+firebase deploy
+
+Para github:
+
+echo "# Consulta-el-clima" >> README.md 
+git init 
+git add README.md 
+git commit -m "primer commit" 
+git branch -M main 
+git remote add origin https://github.com/jrojass5/Consulta-el-clima.git
+git push -u origin main
+
+
+react-google maps Api:
+npm i @react-google-maps/api
+
+Bibliografia:
+icon: Flaticon logo
+
+
+
+Api:
+Google Maps JavaScript API.
+openweather (Current Weather Data)
+MyMemory

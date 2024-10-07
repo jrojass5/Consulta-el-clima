@@ -1,38 +1,159 @@
 .App {
-  text-align: center;
+  text-align: center; /* Centrar el texto en toda la aplicación */
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background: 
+  url('https://firebasestorage.googleapis.com/v0/b/consulta-el-clima.appspot.com/o/img%2Fimg102.jpg?alt=media&token=fb33791a-e53f-4d52-9c21-dc6e6051c2f8'); /* Imagen de fondo */
+  background-size: cover; /* Ajusta la imagen para que cubra todo el contenedor */
+  background-position: center; /* Centra la imagen en el contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  min-height: 100vh; /* Define la altura mínima para ocupar toda la pantalla */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.wrapper {
+  background: transparent; /* Fondo transparente */
+  width: 100%;
+  min-height: 100vh; /* Altura mínima del 100% de la vista */
+  backdrop-filter: blur(8px); /* Aplica un efecto de desenfoque al fondo */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido verticalmente */
+}
+
+.title {
+  color: black; /* Color del texto del título */
+  font-size: 100px; /* Tamaño de fuente grande para el título */
+}
+
+.info {
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Alinea verticalmente los elementos */
+}
+
+.Consul {
+  height: auto;
+  width: 500px; /* Ancho fijo para el contenedor de la consulta */
+  margin: 20px;
+  border-radius: 20px; /* Bordes redondeados */
+  background-color: #9b979780; /* Fondo con transparencia */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra alrededor del contenedor */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.data {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  display: flex;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra en el bloque de datos */
+  border-radius: 20px;
+  overflow: hidden; /* Esconder contenido que sobresalga */
+}
+
+.dataweather {
+  padding: 10px; /* Añadir espacio alrededor del contenido */
+}
+
+.img {
+  width: 100px;
+  height: 100px; /* Tamaño del ícono del clima */
+}
+
+.Description {
+  font-size: 20px;
+  color: white; /* Color del texto de la descripción */
+}
+
+.datadescription {
+  width: 100%; /* Ocupa el ancho completo disponible */
+}
+
+.temp {
+  color: white; /* Color del texto de la temperatura */
+  font-size: 50px; /* Tamaño grande para mostrar la temperatura */
+  margin: 10px;
+}
+
+.p {
+  color: white; /* Color del texto de los detalles adicionales (humedad, visibilidad, etc.) */
+}
+
+.h1 {
+  color: white; /* Color del título principal */
+}
+
+.input-box {
+  width: 100%;
+  height: 50px;
+  margin: 10px; /* Espaciado alrededor de los campos de entrada */
+}
+
+.input-box input {
+  width: 50%; /* Ancho del campo de entrada */
+  height: 10px;
+  border: none; /* Sin borde para los campos de entrada */
+  outline: none; /* Sin borde de enfoque */
+  border-radius: 20px; /* Bordes redondeados */
+  font-size: 16px;
+  color: black; /* Color del texto de entrada */
+  padding: 20px 45px 20px 20px; /* Espaciado dentro del campo de entrada */
+}
+
+.input-box input::placeholder {
+  color: black; /* Color del texto del placeholder */
+}
+
+.btn {
+  background-image: linear-gradient(to right, #ec4333 10%, #f6bc10 60%); /* Gradiente en el botón */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 45px;
+  border: none;
+  outline: none;
+  border-radius: 40px; /* Bordes redondeados en el botón */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra en el botón */
+  cursor: pointer; /* Cambia el cursor a mano cuando se pasa sobre el botón */
+  font-size: 16px;
+  color: white; /* Texto blanco en el botón */
+  font-weight: 600; /* Fuente negrita */
+  margin: 10px;
+}
+
+.btnl {
+  background-image: linear-gradient(to right, #2ba1c5 10%, #10f6eb 60%); /* Gradiente para el botón "Limpiar" */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 45px;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra en el botón "Limpiar" */
+  cursor: pointer;
+  font-size: 16px;
   color: white;
+  font-weight: 600;
+  margin: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.output {
+  color: red; /* Color del mensaje de salida o error */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.map {
+  background-color: #ffffff; /* Fondo blanco para el mapa */
+  width: 500px;
+  height: 500px; /* Tamaño fijo para el mapa */
+  border-radius: 20px; /* Bordes redondeados del contenedor del mapa */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra alrededor del mapa */
+  overflow: hidden; /* Esconder cualquier contenido que sobresalga */
 }
